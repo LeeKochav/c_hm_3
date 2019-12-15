@@ -33,7 +33,6 @@ int main()
     
     while(count<SIZE)
     {
-        printf("PLease insert a number ");
         int number;
         if(scanf("%d",&number)==1)
         {
