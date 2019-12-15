@@ -1,25 +1,28 @@
 #include "isort.h"
 #include <stdio.h>
-#define SIZE 50 
+#define SIZE 50
 
 void shift_element(int* arr, int i)
 {
-    int val=*(arr+i);
-    int j=i-1;
-    while(j>=0 && *(arr+j)>val)
+    for(int j=i-1; j>=0; j--)
     {
         *(arr+j+1)=*(arr+j);
-        j--;
     }
-    *(arr+j+1)=val;
-
 }
 
 void insertion_sort(int *arr,int len)
 {
     for(int i=1; i<len; i++)
     {
-    shift_element(arr,i);
+        int val=*(arr+i);
+        int j=i-1;
+
+        while((*(arr+j)>val)&&j>=0)
+        {
+            shift_element(arr+j,1);
+            j--;
+        }
+        *(arr+j+1)=val;
     }
 }
 
