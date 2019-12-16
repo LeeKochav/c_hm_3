@@ -45,7 +45,10 @@ int main()
     for(int i=0; i<SIZE; i++)
     {
         printf("%d",arr[i]);
+        if(i!=SIZE-1)
+        {
         printf(",");
+        }
     }
     return 0;
 

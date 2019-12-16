@@ -5,6 +5,9 @@
 #define WORD 30
 #define DIFF 1
 #define DATA 3
+#define FIRSTROW  1
+#define ACTION 0
+#define WORDFIND 0
 
 
 char text[LINE][LINE];
@@ -124,13 +127,13 @@ int main()
    {
        getWord(text[i]); 
    }
-   if(text[1][0]=='a')
+   if(text[FIRSTROW][ACTION]=='a')
    {
-       print_lines(text[0]);
+       print_lines(text[WORDFIND]);
    }
-   else if(text[1][0]=='b')
+   else if(text[FIRSTROW][ACTION]=='b')
    {
-        print_similar_words(text[0]);
+        print_similar_words(text[WORDFIND]);
    }
     return 0;
 }
